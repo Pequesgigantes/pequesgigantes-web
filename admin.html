@@ -476,4 +476,13 @@ function limpiarFiltro() {
 </script>
 
 </body>
+<script>
+  const clave = "PG2025"; // CAMBIÁ ESTA CLAVE
+  let ingresar = prompt("Ingresar contraseña del administrador:");
+
+  if (ingresar !== clave) {
+    alert("Contraseña incorrecta");
+    window.location.href = "https://google.com"; // redirecciona afuera
+  }
+</script>
 </html>
