@@ -81,7 +81,42 @@ function verProducto(p) {
 
 function cerrarModal() {
   document.getElementById("modal-producto").classList.add("oculto");
+}function verProducto(p) {
+  document.getElementById("modal-imagen").src = p.imagen;
+  document.getElementById("modal-nombre").innerText = p.nombre;
+  document.getElementById("modal-precio").innerText = "$" + p.precio;
+  document.getElementById("modal-stock").innerText = p.stock;
+  document.getElementById("modal-color").innerText = p.color;
+  document.getElementById("modal-talles").innerText = p.talles ?? "Consultar";
+
+  // --- cargar talles en el select ---
+  const selectTalle = document.getElementById("seleccionar-talle");
+  selectTalle.innerHTML = "";
+
+  if (p.talles) {
+    p.talles.split(",").forEach(t => {
+      const op = document.createElement("option");
+      op.value = t.trim();
+      op.innerText = t.trim();
+      selectTalle.appendChild(op);
+    });
+  }
+
+  // Reset cantidad
+  document.getElementById("seleccionar-cantidad").value = 1;
+
+  // Acción botón agregar
+  document.getElementById("modal-agregar").onclick = () => {
+    const talle = selectTalle.value;
+    const cantidad = Number(document.getElementById("seleccionar-cantidad").value);
+
+    agregarAlCarrito(p, talle, cantidad);
+    cerrarModal();
+  };
+
+  document.getElementById("modal-producto").classList.remove("oculto");
 }
+
 
 // ================================
 // SECCIONES (Niño / Niña / Bebé / Beba)
@@ -98,10 +133,16 @@ function toggleCarrito() {
   document.getElementById("carrito").classList.toggle("show");
 }
 
-function agregarAlCarrito(p) {
-  carrito.push(p);
+function agregarAlCarrito(p, talle, cantidad) {
+  carrito.push({
+    ...p,
+    talle: talle,
+    cantidad: cantidad
+  });
+
   actualizarCarrito();
 }
+
 
 function actualizarCarrito() {
   const cont = document.getElementById("items-carrito");
@@ -110,13 +151,16 @@ function actualizarCarrito() {
   let total = 0;
 
   carrito.forEach((p, i) => {
-    total += p.precio;
+    const subtotal = p.precio * p.cantidad;
+    total += subtotal;
 
     cont.innerHTML += `
       <div class="carrito-item">
         <div class="info">
-          <strong>${p.nombre}</strong>
-          <span>$${p.precio}</span>
+          <strong>${p.nombre}</strong><br>
+          <small>Talle: ${p.talle}</small><br>
+          <small>Cant: ${p.cantidad}</small><br>
+          <span>$${subtotal}</span>
         </div>
         <button onclick="eliminar(${i})">X</button>
       </div>
@@ -124,12 +168,13 @@ function actualizarCarrito() {
   });
 
   if (document.getElementById("entrega").value === "envio") {
-    total += 1500;
+    total += 2000;
   }
 
   document.getElementById("contador-flotante").innerText = carrito.length;
   document.getElementById("total").innerText = "Total: $" + total;
 }
+
 
 function eliminar(i) {
   carrito.splice(i, 1);
@@ -154,7 +199,7 @@ function mostrarDireccion() {
 }
 
 // ================================
-// DATOS DE PAGO
+// DATOS DE PAGO (ACTUALIZADOS)
 // ================================
 function mostrarDatosPago() {
   const pago = document.getElementById("pago").value;
@@ -194,8 +239,9 @@ function enviarPedido() {
   let msg = "*Nuevo pedido:*%0A%0A";
 
   carrito.forEach(p => {
-    msg += `- ${p.nombre} $${p.precio}%0A`;
+  msg += `- ${p.nombre} | Talle: ${p.talle} | Cant: ${p.cantidad} | $${p.precio} c/u | Subtotal: $${p.precio * p.cantidad}%0A`;
   });
+
 
   const total = document.getElementById("total").innerText;
   const pago = document.getElementById("pago").value;
@@ -207,12 +253,12 @@ function enviarPedido() {
 
   if (entrega === "envio") {
     msg += `%0A*Dirección:* ${document.getElementById("direccion").value}`;
-    msg += `%0A*Costo envío:* $2000`;
+    msg += `%0A*Costo envío:* $2000`; // actualizado
   }
 
   if (pago === "transferencia") {
     msg += `%0A%0A*CBU:* 0930311710100845283600`;
-    msg += `%0A*Titular:* Peueños Gigantes`;
+    msg += `%0A*Titular:* Pequeños Gigantes`;
   }
 
   if (pago === "mp") {

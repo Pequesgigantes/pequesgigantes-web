@@ -402,3 +402,14 @@ body {
 }
 
 
+#seleccionar-cantidad {
+    width: 25px;        /* 👈 más chico */
+    padding: 5px;
+    text-align: center;
+}
+
+.contenedor-talles-cant {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

@@ -91,16 +91,31 @@
         <span class="cerrar" onclick="cerrarModal()">×</span>
 
         <img id="modal-imagen">
+
         <h2 id="modal-nombre"></h2>
         <p id="modal-precio" class="modal-precio"></p>
 
         <p><strong>Talles:</strong> <span id="modal-talles"></span></p>
+
+        <!-- BLOQUE SELECCIONAR TALLE -->
+        <div class="bloque-talle">
+            <label><strong>Seleccionar talle:</strong></label>
+            <select id="seleccionar-talle"></select>
+        </div>
+
+        <!-- BLOQUE CANTIDAD -->
+        <div class="bloque-cantidad">
+            <label><strong>Cantidad:</strong></label>
+            <input type="number" id="seleccionar-cantidad" value="1" min="1">
+        </div>
+
         <p><strong>Color:</strong> <span id="modal-color"></span></p>
         <p><strong>Stock:</strong> <span id="modal-stock"></span></p>
 
         <button id="modal-agregar" class="btn">Agregar al carrito</button>
     </div>
 </div>
+
 
 <script src="script.js"></script>
 
