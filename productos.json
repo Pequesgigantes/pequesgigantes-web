@@ -1,12 +1,1 @@
-[
-  {
-    "id": 1,
-    "categoria": "beba",
-    "nombre": "Vestido Jean",
-    "precio": 25000,
-    "imagen": "imagenes/vestido jean.jpg",
-    "stock": "1",
-    "color": "Azul",
-    "talles": "1"
-  }
-]
+[]
