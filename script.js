@@ -17,7 +17,7 @@ fetch("productos.json")
   });
 
 // ================================
-// RENDERIZAR PRODUCTO
+// RENDERIZAR PRODUCTO EN CATÁLOGO
 // ================================
 function renderProducto(p) {
 
@@ -54,7 +54,7 @@ function renderProducto(p) {
     <img src="${p.imagen}" onclick='verProducto(${JSON.stringify(p)})'>
     <h4>${p.nombre}</h4>
     <p>$${p.precio}</p>
-    <button onclick='agregarAlCarrito(${JSON.stringify(p)})'>Agregar</button>
+    <button onclick='verProducto(${JSON.stringify(p)})'>Agregar</button>
   `;
 
   contenedor.appendChild(div);
@@ -64,59 +64,71 @@ function renderProducto(p) {
 // MODAL DE PRODUCTO
 // ================================
 function verProducto(p) {
-  document.getElementById("modal-imagen").src = p.imagen;
-  document.getElementById("modal-nombre").innerText = p.nombre;
-  document.getElementById("modal-precio").innerText = "$" + p.precio;
-  document.getElementById("modal-stock").innerText = p.stock;
-  document.getElementById("modal-color").innerText = p.color;
-  document.getElementById("modal-talles").innerText = p.talles ?? "Consultar";
 
-  document.getElementById("modal-agregar").onclick = () => {
-    agregarAlCarrito(p);
-    cerrarModal();
-  };
+    // ========== CARGAR DATOS ==========
+    document.getElementById("modal-imagen").src = p.imagen;
+    document.getElementById("modal-nombre").innerText = p.nombre;
+    document.getElementById("modal-precio").innerText = "$" + p.precio;
+    document.getElementById("modal-stock").innerText = p.stock;
+    document.getElementById("modal-color").innerText = p.color;
 
-  document.getElementById("modal-producto").classList.remove("oculto");
+    // ========== GENERAR BOTONES DE TALLE ==========
+    const contenedorTalles = document.getElementById("talle-opciones");
+    contenedorTalles.innerHTML = "";
+
+    let talleSeleccionado = null;
+
+    if (p.talles) {
+        p.talles.split(",").forEach(t => {
+            const btn = document.createElement("div");
+            btn.classList.add("talle-opcion");
+            btn.innerText = t.trim();
+
+            btn.onclick = () => {
+                document.querySelectorAll(".talle-opcion").forEach(b => b.classList.remove("selected"));
+                btn.classList.add("selected");
+                talleSeleccionado = t.trim();
+            };
+
+            contenedorTalles.appendChild(btn);
+        });
+    }
+
+    // ========== CANTIDAD + / - ==========
+    let cantidadActual = 1;
+    document.getElementById("cantidad-valor").innerText = cantidadActual;
+
+    document.getElementById("btn-sumar").onclick = () => {
+        cantidadActual++;
+        document.getElementById("cantidad-valor").innerText = cantidadActual;
+    };
+
+    document.getElementById("btn-restar").onclick = () => {
+        if (cantidadActual > 1) {
+            cantidadActual--;
+            document.getElementById("cantidad-valor").innerText = cantidadActual;
+        }
+    };
+
+    // ========== AGREGAR AL CARRITO ==========
+    document.getElementById("modal-agregar").onclick = () => {
+
+        if (!talleSeleccionado) {
+            alert("Seleccioná un talle");
+            return;
+        }
+
+        agregarAlCarrito(p, talleSeleccionado, cantidadActual);
+        cerrarModal();
+    };
+
+    // Mostrar modal
+    document.getElementById("modal-producto").classList.remove("oculto");
 }
 
 function cerrarModal() {
   document.getElementById("modal-producto").classList.add("oculto");
-}function verProducto(p) {
-  document.getElementById("modal-imagen").src = p.imagen;
-  document.getElementById("modal-nombre").innerText = p.nombre;
-  document.getElementById("modal-precio").innerText = "$" + p.precio;
-  document.getElementById("modal-stock").innerText = p.stock;
-  document.getElementById("modal-color").innerText = p.color;
-  document.getElementById("modal-talles").innerText = p.talles ?? "Consultar";
-
-  // --- cargar talles en el select ---
-  const selectTalle = document.getElementById("seleccionar-talle");
-  selectTalle.innerHTML = "";
-
-  if (p.talles) {
-    p.talles.split(",").forEach(t => {
-      const op = document.createElement("option");
-      op.value = t.trim();
-      op.innerText = t.trim();
-      selectTalle.appendChild(op);
-    });
-  }
-
-  // Reset cantidad
-  document.getElementById("seleccionar-cantidad").value = 1;
-
-  // Acción botón agregar
-  document.getElementById("modal-agregar").onclick = () => {
-    const talle = selectTalle.value;
-    const cantidad = Number(document.getElementById("seleccionar-cantidad").value);
-
-    agregarAlCarrito(p, talle, cantidad);
-    cerrarModal();
-  };
-
-  document.getElementById("modal-producto").classList.remove("oculto");
 }
-
 
 // ================================
 // SECCIONES (Niño / Niña / Bebé / Beba)
@@ -142,7 +154,6 @@ function agregarAlCarrito(p, talle, cantidad) {
 
   actualizarCarrito();
 }
-
 
 function actualizarCarrito() {
   const cont = document.getElementById("items-carrito");
@@ -175,14 +186,13 @@ function actualizarCarrito() {
   document.getElementById("total").innerText = "Total: $" + total;
 }
 
-
 function eliminar(i) {
   carrito.splice(i, 1);
   actualizarCarrito();
 }
 
 // ================================
-// DIRECCIÓN (ENVÍO / LOCAL)
+// ENTREGA
 // ================================
 function mostrarDireccion() {
   const entrega = document.getElementById("entrega").value;
@@ -199,7 +209,7 @@ function mostrarDireccion() {
 }
 
 // ================================
-// DATOS DE PAGO (ACTUALIZADOS)
+// DATOS DE PAGO
 // ================================
 function mostrarDatosPago() {
   const pago = document.getElementById("pago").value;
@@ -207,41 +217,34 @@ function mostrarDatosPago() {
   const datos = document.getElementById("datos-pago");
 
   if (pago === "transferencia") {
-    cel.classList.remove("oculto");
     datos.classList.remove("oculto");
-
     datos.innerHTML = `
       <strong>CBU:</strong> 0930311710100845283600 <br>
       <strong>Titular:</strong> Pequeños Gigantes
     `;
   }
   else if (pago === "mp") {
-    cel.classList.remove("oculto");
     datos.classList.remove("oculto");
-
     datos.innerHTML = `
       <strong>Alias:</strong> peques.gigantes06 <br>
       <strong>CVU:</strong> 0000003100146278369987
     `;
   }
   else {
-    cel.classList.add("oculto");
     datos.classList.add("oculto");
-    cel.value = "";
     datos.innerHTML = "";
   }
 }
 
 // ================================
-// ENVIAR PEDIDO POR WHATSAPP
+// WHATSAPP
 // ================================
 function enviarPedido() {
   let msg = "*Nuevo pedido:*%0A%0A";
 
   carrito.forEach(p => {
-  msg += `- ${p.nombre} | Talle: ${p.talle} | Cant: ${p.cantidad} | $${p.precio} c/u | Subtotal: $${p.precio * p.cantidad}%0A`;
+    msg += `- ${p.nombre} | Talle: ${p.talle} | Cant: ${p.cantidad} | $${p.precio} c/u | Subtotal: $${p.precio * p.cantidad}%0A`;
   });
-
 
   const total = document.getElementById("total").innerText;
   const pago = document.getElementById("pago").value;
@@ -253,7 +256,7 @@ function enviarPedido() {
 
   if (entrega === "envio") {
     msg += `%0A*Dirección:* ${document.getElementById("direccion").value}`;
-    msg += `%0A*Costo envío:* $2000`; // actualizado
+    msg += `%0A*Costo envío:* $2000`;
   }
 
   if (pago === "transferencia") {
@@ -266,36 +269,10 @@ function enviarPedido() {
     msg += `%0A*CVU:* 0000003100146278369987`;
   }
 
-  if (pago !== "tarjeta") {
-    msg += `%0A*Celular:* ${document.getElementById("celular").value}`;
-  }
-
   window.open("https://wa.me/5492996239628?text=" + msg);
 
   setTimeout(() => {
     carrito = [];
     window.location.reload();
-  }, 1500);
-}
-
-
-// ================================
-// BUSCADOR MINI (ADMIN)
-// ================================
-const tbodyProductos = document.getElementById("tbody-productos");
-
-function filtrarPorID() {
-  const idBuscado = document.getElementById("buscarID").value.trim();
-
-  const filas = tbodyProductos?.querySelectorAll("tr") ?? [];
-
-  filas.forEach(fila => {
-    const id = fila.querySelector("td").textContent.trim();
-
-    if (idBuscado === "" || id === idBuscado) {
-      fila.style.display = "";
-    } else {
-      fila.style.display = "none";
-    }
-  });
+  }, 1200);
 }

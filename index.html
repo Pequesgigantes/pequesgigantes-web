@@ -11,18 +11,24 @@
 
 <body>
 
-<!-- LOGO + TÍTULO + BOTONES -->
+<!-- BOTÓN INSTAGRAM ARRIBA A LA DERECHA -->
+<a href="https://www.instagram.com/pequesgigantes2025?igsh=bHozdnQ3NWdieTg0"
+   target="_blank"
+   class="insta-top">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+</a>
+
+<!-- LOGO + TÍTULO + MENÚ -->
 <div class="header-contenedor">
     <img src="Logo/logo.png" class="logo-redondo" alt="Logo Pequeños Gigantes">
     <h1 class="titulo-pequenos">Pequeños Gigantes</h1>
 
-<nav class="menu-centro">
-    <button onclick="mostrarSeccion('nino')">Niño</button>
-    <button onclick="mostrarSeccion('nina')">Niña</button>
-    <button onclick="mostrarSeccion('bebe')">Bebé</button>
-    <button onclick="mostrarSeccion('beba')">Beba</button>
-</nav>
-
+    <nav class="menu-centro">
+        <button onclick="mostrarSeccion('nino')">Niño</button>
+        <button onclick="mostrarSeccion('nina')">Niña</button>
+        <button onclick="mostrarSeccion('bebe')">Bebé</button>
+        <button onclick="mostrarSeccion('beba')">Beba</button>
+    </nav>
 </div>
 
 <!-- === CATÁLOGO NIÑO === -->
@@ -49,7 +55,6 @@
   <div id="catalogo-beba" class="catalogo"></div>
 </section>
 
-
 <!-- === CARRITO === -->
 <div id="carrito" class="carrito">
     <h3>🛒 Carrito</h3>
@@ -63,8 +68,6 @@
       <option value="mp">Mercado Pago</option>
       <option value="tarjeta">Tarjeta (Local)</option>
     </select>
-
-    <input type="text" id="celular" placeholder="Celular para enviar comprobante" class="oculto">
 
     <div id="datos-pago" class="oculto"></div>
 
@@ -84,7 +87,7 @@
     🛍️ <span id="contador-flotante">0</span>
 </div>
 
-<!-- === MODAL DE PRODUCTO === -->
+<!-- === MODAL PRODUCTO === -->
 <div id="modal-producto" class="modal oculto">
     <div class="modal-contenido">
 
@@ -95,18 +98,20 @@
         <h2 id="modal-nombre"></h2>
         <p id="modal-precio" class="modal-precio"></p>
 
-        <p><strong>Talles:</strong> <span id="modal-talles"></span></p>
-
-        <!-- BLOQUE SELECCIONAR TALLE -->
+        <!-- BLOQUE TALLES -->
         <div class="bloque-talle">
             <label><strong>Seleccionar talle:</strong></label>
-            <select id="seleccionar-talle"></select>
+            <div id="talle-opciones" class="talle-opciones"></div>
         </div>
 
         <!-- BLOQUE CANTIDAD -->
         <div class="bloque-cantidad">
             <label><strong>Cantidad:</strong></label>
-            <input type="number" id="seleccionar-cantidad" value="1" min="1">
+            <div class="cantidad-contenedor">
+                <button type="button" id="btn-restar" class="cantidad-btn">−</button>
+                <span id="cantidad-valor">1</span>
+                <button type="button" id="btn-sumar" class="cantidad-btn">+</button>
+            </div>
         </div>
 
         <p><strong>Color:</strong> <span id="modal-color"></span></p>
@@ -116,16 +121,7 @@
     </div>
 </div>
 
-
 <script src="script.js"></script>
-
-<a href="https://www.instagram.com/pequesgigantes2025?igsh=bHozdnQ3NWdieTg0"
-   target="_blank"
-   class="insta-top">
-  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
-</a>
 
 </body>
 </html>
-
-

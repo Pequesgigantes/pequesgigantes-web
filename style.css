@@ -281,6 +281,7 @@ body {
     z-index: 99999;
 }
 
+/* Modal contenido responsive */
 .modal-contenido {
     background: rgba(255,255,255,0.12);
     backdrop-filter: blur(15px);
@@ -288,11 +289,96 @@ body {
     padding: 20px;
     width: 90%;
     max-width: 350px;
+    max-height: 90vh;          /* 👈 PREVIENE QUE SE CORTE */
+    overflow-y: auto;          /* 👈 PERMITE DESPLAZAR */
     border-radius: 18px;
     color: white;
     text-align: center;
     position: relative;
 }
+
+/* Talles centrados */
+.talle-opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* Botón de talle 100% centrado */
+.talle-opcion {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    line-height: 34px;          /* 👈 CENTRADO VERTICAL */
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s ease;
+    padding: 0;
+}
+
+.talle-opcion:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.talle-opcion.selected {
+    background: white;
+    color: #2d482b;
+    border-color: white;
+}
+
+/* Cantidad centrada */
+.cantidad-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 10px 0 15px;
+}
+
+/* MODO CELULAR */
+@media (max-width: 480px) {
+
+    /* Modal completo */
+    .modal-contenido {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    /* Botones de talle - más chicos */
+    .talle-opcion {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    /* Carrito flotante más chico */
+    #btn-carrito-flotante {
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #contador-flotante {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+}
+
 
 .modal-contenido img {
     width: 100%;
@@ -412,4 +498,160 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+.talle-opciones {
+    display: flex;
+    justify-content: center;   /* CENTRAR FILAS */
+    align-items: center;
+    gap: 6px;                  /* MENOS ESPACIO ENTRE BOTONES */
+    flex-wrap: wrap;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.talle-opcion {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.4);
+
+    display: flex;
+    align-items: center;       /* CENTRO VERTICAL */
+    justify-content: center;   /* CENTRO HORIZONTAL */
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    transition: 0.2s ease;
+    padding: 0;
+}
+
+
+
+.talle-opcion:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.talle-opcion.selected {
+    background: white !important;
+    color: #2d482b !important;   /* verde institucional */
+    border-color: white !important;
+}
+
+#modal-agregar {
+    width: 100%;
+    background: #d4af37;
+    color: #2d482b;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#modal-agregar:hover {
+    background: #f5d76e;
+    transform: scale(1.03);
+}
+.cantidad-contenedor {
+    display: flex;
+    justify-content: center;   /* CENTRADO HORIZONTAL */
+    align-items: center;       /* CENTRADO VERTICAL */
+    gap: 12px;
+    width: 100%;               /* OCUPA TODO EL ANCHO */
+    margin: 10px 0 15px;
+}
+
+
+.cantidad-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(212,175,55,0.6);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+.cantidad-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+#cantidad-valor {
+    width: 40px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(212,175,55,0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bloque-cantidad label {
+    width: 100%;
+    text-align: center;   /* CENTRA EL TÍTULO */
+    display: block;
+}
+.bloque-talle,
+.bloque-cantidad {
+    text-align: center;
+    width: 100%;
+}
+
+/* --- Botón Instagram arriba a la derecha --- */
+.header-social {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.icon-instagram {
+    background: #d4af37;
+    color: #2d482b;
+    padding: 10px 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border: 2px solid #d4af37;
+}
+
+.icon-instagram:hover {
+    background: #f5d76e;
+    transform: scale(1.12);
+}
+
+/* Para que no tape el botón del carrito en celular */
+@media (max-width: 480px) {
+    .header-social {
+        top: 12px;
+        right: 15px;
+    }
+
+    .icon-instagram svg {
+        width: 22px;
+        height: 22px;
+    }
 }
