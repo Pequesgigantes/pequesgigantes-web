@@ -6,23 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Poppins', system-ui, sans-serif;
-    }
+    * { box-sizing: border-box; font-family: 'Poppins', system-ui, sans-serif; }
+    body { margin: 0; background: #1f2f1d; color: #fff; padding: 20px; }
 
-    body {
-      margin: 0;
-      background: #1f2f1d;
-      color: #fff;
-      padding: 20px;
-    }
-
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
+    h1, h2 { text-align: center; margin-bottom: 10px; }
     h1 { font-size: 28px; }
     h2 { font-size: 20px; opacity: 0.9; }
 
@@ -50,117 +37,39 @@
 
     label { display: block; margin-top: 8px; font-size: 14px; opacity: 0.9; }
 
-    input[type="text"],
-    input[type="number"],
-    select {
-      width: 100%;
-      padding: 7px 10px;
-      border-radius: 10px;
+    input[type="text"], input[type="number"], select {
+      width: 100%; padding: 7px 10px; border-radius: 10px;
       border: 1px solid rgba(255,255,255,0.25);
-      margin-top: 3px;
-      background: rgba(0,0,0,0.2);
-      color: #fff;
+      margin-top: 3px; background: rgba(0,0,0,0.2); color: #fff;
     }
 
     input[type="file"] { margin-top: 5px; }
-
     input::placeholder { color: rgba(255,255,255,0.6); }
 
     .fila { display: flex; gap: 10px; }
     .fila > div { flex: 1; }
 
     button {
-      border-radius: 12px;
-      border: none;
-      padding: 9px 16px;
-      font-size: 14px;
-      cursor: pointer;
-      margin-top: 12px;
-      font-weight: 600;
+      border-radius: 12px; border: none; padding: 9px 16px;
+      font-size: 14px; cursor: pointer; margin-top: 12px; font-weight: 600;
     }
 
     .btn-primario { background: #d4af37; color: #2d482b; }
-    .btn-primario:hover { background: #f5d76e; }
-
-    .btn-secundario {
-      background: transparent;
-      border: 1px solid rgba(212,175,55,0.8);
-      color: #f5d76e;
-    }
-
-    .btn-secundario:hover { background: rgba(255,255,255,0.08); }
-
     .btn-peligro { background: #ff5555; color: #fff; }
-    .btn-peligro:hover { background: #ff7676; }
+    .btn-secundario { background: transparent; border: 1px solid rgba(212,175,55,0.8); color: #f5d76e; }
 
-    .preview-imagen {
-      margin-top: 10px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.15);
-      max-height: 180px;
-    }
-
+    .preview-imagen { margin-top: 10px; border-radius: 12px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.15); max-height: 180px; display:none; }
     .preview-imagen img { width: 100%; object-fit: cover; }
 
-    .tabla-contenedor {
-      max-height: 380px;
-      overflow-y: auto;
-      margin-top: 8px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
+    .tabla-contenedor { max-height: 380px; overflow-y: auto; margin-top: 8px;
+      border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 13px;
-    }
-
-    th, td {
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 6px 7px;
-    }
-
-    th {
-      background: rgba(0,0,0,0.35);
-      position: sticky;
-      top: 0;
-    }
-
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+    th, td { border: 1px solid rgba(255,255,255,0.1); padding: 6px 7px; }
+    th { background: rgba(0,0,0,0.35); position: sticky; top: 0; }
     tbody tr:nth-child(odd) { background: rgba(255,255,255,0.03); }
 
-    .acciones { display: flex; gap: 4px; }
-
-    /* BUSCADOR MINI */
-    .buscador-mini {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 12px;
-    }
-
-    .buscador-mini input {
-      width: 90px;
-      padding: 6px 8px;
-      border-radius: 8px;
-      border: 1px solid rgba(212,175,55,0.5);
-      background: rgba(0,0,0,0.25);
-      color: white;
-    }
-
-    .buscador-mini button {
-      padding: 6px 10px;
-      border-radius: 8px;
-      background: #d4af37;
-      color: #2d482b;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .buscador-mini button:hover { background: #f5d76e; }
   </style>
 </head>
 
@@ -180,7 +89,7 @@
         <div class="fila">
           <div>
             <label>ID</label>
-            <input type="number" id="id" placeholder="Ej: 1">
+            <input type="number" id="id">
           </div>
 
           <div>
@@ -188,34 +97,36 @@
             <select id="categoria">
               <option value="niño">Niño</option>
               <option value="niña">Niña</option>
+              <option value="bebe">Bebé</option>
+              <option value="beba">Beba</option>
             </select>
           </div>
         </div>
 
         <label>Nombre</label>
-        <input type="text" id="nombre" placeholder="Ej: Vestido Rosa">
+        <input type="text" id="nombre">
 
         <div class="fila">
           <div>
             <label>Precio</label>
-            <input type="number" id="precio" placeholder="Ej: 15000">
+            <input type="number" id="precio">
           </div>
 
           <div>
             <label>Stock</label>
-            <input type="number" id="stock" placeholder="Ej: 10">
+            <input type="number" id="stock">
           </div>
         </div>
 
         <div class="fila">
           <div>
             <label>Color</label>
-            <input type="text" id="color" placeholder="Ej: Azul">
+            <input type="text" id="color">
           </div>
 
           <div>
             <label>Talles</label>
-            <input type="text" id="talles" placeholder="Ej: 4,6,8">
+            <input type="text" id="talles">
           </div>
         </div>
 
@@ -223,7 +134,7 @@
         <label>Imagen del producto</label>
         <input type="file" id="imagenArchivo" accept="image/*">
 
-        <div class="preview-imagen" id="preview-imagen" style="display:none;">
+        <div class="preview-imagen" id="preview-imagen">
           <img id="preview-img-tag">
         </div>
 
@@ -237,25 +148,19 @@
 
       </form>
 
-      <hr style="margin:16px 0;">
+      <hr>
 
       <h3>📥 Importar productos.json</h3>
       <input type="file" id="input-importar-json" accept="application/json">
 
       <h3 style="margin-top:16px;">📤 Exportar catálogo</h3>
       <button class="btn-primario" id="btn-exportar">Descargar productos.json</button>
+
     </div>
 
     <!-- TABLA -->
     <div class="card">
       <h3>📋 Productos cargados</h3>
-
-      <!-- BUSCADOR MINI -->
-      <div class="buscador-mini">
-        <input type="number" id="buscarID" placeholder="ID...">
-        <button id="btn-buscar-mini">🔍</button>
-        <button id="btn-limpiar-mini">↺</button>
-      </div>
 
       <div class="tabla-contenedor">
         <table>
@@ -284,6 +189,7 @@ let productos = [];
 const form = document.getElementById("form-producto");
 const tbody = document.getElementById("tbody-productos");
 
+// Inputs
 const inputId = document.getElementById("id");
 const inputCategoria = document.getElementById("categoria");
 const inputNombre = document.getElementById("nombre");
@@ -293,65 +199,33 @@ const inputColor = document.getElementById("color");
 const inputTalles = document.getElementById("talles");
 const inputRutaImagen = document.getElementById("rutaImagen");
 
-// ==========================
-// LECTOR DE IMAGEN BASE64
-// ==========================
 const fileInput = document.getElementById("imagenArchivo");
-let imagenBase64 = "";
+let imagenNombre = "";
 
+// ==============================
+// IMAGEN REAL (NO BASE64)
+// ==============================
 fileInput.addEventListener("change", function () {
   const archivo = fileInput.files[0];
   if (!archivo) return;
 
-  const lector = new FileReader();
-  lector.readAsDataURL(archivo);
+  imagenNombre = archivo.name;
+  inputRutaImagen.value = "imagenes/" + imagenNombre;
 
-  lector.onload = function () {
-    imagenBase64 = lector.result;
-
-    document.getElementById("preview-img-tag").src = imagenBase64;
-    document.getElementById("preview-imagen").style.display = "block";
-  };
+  const url = URL.createObjectURL(archivo);
+  document.getElementById("preview-img-tag").src = url;
+  document.getElementById("preview-imagen").style.display = "block";
 });
 
-// ==========================
-// RENDER TABLA
-// ==========================
-function renderTabla() {
-  tbody.innerHTML = "";
-  productos.forEach((p, idx) => {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${p.id}</td>
-      <td>${p.categoria}</td>
-      <td>${p.nombre}</td>
-      <td>${p.precio}</td>
-      <td><small>${p.imagen.substring(0,40)}...</small></td>
-      <td>${p.stock}</td>
-      <td>${p.color}</td>
-      <td>${p.talles}</td>
-      <td>
-        <button class="btn-secundario" onclick="editarProducto(${idx})">Editar</button>
-        <button class="btn-peligro" onclick="borrarProducto(${idx})">X</button>
-      </td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
-
-// ==========================
+// ==============================
 // GUARDAR PRODUCTO
-// ==========================
-form.addEventListener("submit", (e) => {
+// ==============================
+form.addEventListener("submit", e => {
   e.preventDefault();
 
-  // VALIDACIONES
-  if (!inputNombre.value.trim()) { alert("Debe ingresar un nombre."); return; }
-  if (!inputPrecio.value.trim()) { alert("Debe ingresar un precio."); return; }
-  if (!imagenBase64 && !inputRutaImagen.value.trim()) {
-    alert("Debe seleccionar una imagen o colocar una ruta.");
-    return;
-  }
+  if (!inputNombre.value.trim()) return alert("Debe ingresar un nombre");
+  if (!inputPrecio.value.trim()) return alert("Debe ingresar un precio");
+  if (!inputRutaImagen.value.trim()) return alert("Debe seleccionar una imagen");
 
   const indice = Number(document.getElementById("indice-edicion").value);
 
@@ -360,7 +234,7 @@ form.addEventListener("submit", (e) => {
     categoria: inputCategoria.value,
     nombre: inputNombre.value,
     precio: Number(inputPrecio.value),
-    imagen: imagenBase64 || inputRutaImagen.value,
+    imagen: inputRutaImagen.value,
     stock: inputStock.value,
     color: inputColor.value,
     talles: inputTalles.value
@@ -373,25 +247,49 @@ form.addEventListener("submit", (e) => {
   renderTabla();
 });
 
-// generar id
 function generarId() {
   if (productos.length === 0) return 1;
   return Math.max(...productos.map(p => Number(p.id))) + 1;
 }
 
-// limpiar
 function limpiar() {
   form.reset();
-  imagenBase64 = "";
   document.getElementById("preview-imagen").style.display = "none";
+  imagenNombre = "";
   document.getElementById("indice-edicion").value = -1;
   document.getElementById("btn-guardar").innerText = "Guardar";
 }
 
-// limpiar botón
 document.getElementById("btn-limpiar").addEventListener("click", limpiar);
 
-// editar
+// ==============================
+// RENDER TABLA
+// ==============================
+function renderTabla() {
+  tbody.innerHTML = "";
+  productos.forEach((p, idx) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${p.id}</td>
+      <td>${p.categoria}</td>
+      <td>${p.nombre}</td>
+      <td>$${p.precio}</td>
+      <td>${p.imagen}</td>
+      <td>${p.stock}</td>
+      <td>${p.color}</td>
+      <td>${p.talles}</td>
+      <td>
+        <button class="btn-secundario" onclick="editarProducto(${idx})">Editar</button>
+        <button class="btn-peligro" onclick="borrarProducto(${idx})">X</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+// ==============================
+// EDITAR PRODUCTO
+// ==============================
 window.editarProducto = function(idx) {
   const p = productos[idx];
 
@@ -404,12 +302,8 @@ window.editarProducto = function(idx) {
   inputTalles.value = p.talles;
   inputRutaImagen.value = p.imagen;
 
-  // SI ES BASE64, mostrar
-  if (p.imagen.startsWith("data:image")) {
-    imagenBase64 = p.imagen;
-    document.getElementById("preview-img-tag").src = p.imagen;
-    document.getElementById("preview-imagen").style.display = "block";
-  }
+  document.getElementById("preview-img-tag").src = p.imagen;
+  document.getElementById("preview-imagen").style.display = "block";
 
   document.getElementById("indice-edicion").value = idx;
   document.getElementById("btn-guardar").innerText = "Actualizar";
@@ -417,7 +311,9 @@ window.editarProducto = function(idx) {
   window.scrollTo(0, 0);
 };
 
-// borrar
+// ==============================
+// BORRAR
+// ==============================
 window.borrarProducto = function(idx) {
   if (confirm("¿Seguro que deseas borrar?")) {
     productos.splice(idx, 1);
@@ -425,64 +321,41 @@ window.borrarProducto = function(idx) {
   }
 };
 
-// exportar
+// ==============================
+// EXPORTAR
+// ==============================
 document.getElementById("btn-exportar").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify(productos, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = url;
+  a.href = URL.createObjectURL(blob);
   a.download = "productos.json";
   a.click();
 });
 
-// importar
+// ==============================
+// IMPORTAR
+// ==============================
 document.getElementById("input-importar-json").addEventListener("change", (e) => {
   const file = e.target.files[0];
   if (!file) return;
 
   const reader = new FileReader();
   reader.onload = (ev) => {
-    try {
-      productos = JSON.parse(ev.target.result);
-      renderTabla();
-    } catch {
-      alert("Error al leer JSON");
-    }
+    productos = JSON.parse(ev.target.result);
+    renderTabla();
   };
   reader.readAsText(file);
 });
+</script>
 
-// ==========================
-// BUSCADOR MINI
-// ==========================
-document.getElementById("btn-buscar-mini").addEventListener("click", filtrarPorID);
-document.getElementById("btn-limpiar-mini").addEventListener("click", limpiarFiltro);
-
-function filtrarPorID() {
-  const idBuscado = document.getElementById("buscarID").value.trim();
-  const filas = tbody.querySelectorAll("tr");
-
-  filas.forEach(fila => {
-    const idFila = fila.querySelector("td").textContent.trim();
-    fila.style.display = (!idBuscado || idFila === idBuscado) ? "" : "none";
-  });
-}
-
-function limpiarFiltro() {
-  document.getElementById("buscarID").value = "";
-  filtrarPorID();
-}
-
+<script>
+  const clave = "PG2025";
+  let ingresar = prompt("Ingresar contraseña del administrador:");
+  if (ingresar !== clave) {
+    alert("Contraseña incorrecta");
+    window.location.href = "https://google.com";
+  }
 </script>
 
 </body>
-<script>
-  const clave = "PG2025"; // CAMBIÁ ESTA CLAVE
-  let ingresar = prompt("Ingresar contraseña del administrador:");
-
-  if (ingresar !== clave) {
-    alert("Contraseña incorrecta");
-    window.location.href = "https://google.com"; // redirecciona afuera
-  }
-</script>
 </html>

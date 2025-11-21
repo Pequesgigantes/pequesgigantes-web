@@ -16,11 +16,36 @@ fetch("productos.json")
     console.error("Error cargando productos.json:", err);
   });
 
-// --- Renderizar producto ---
+// ================================
+// RENDERIZAR PRODUCTO
+// ================================
 function renderProducto(p) {
-  const contenedor = p.categoria.trim().toLowerCase() === "niño"
-    ? document.getElementById("catalogo-nino")
-    : document.getElementById("catalogo-nina");
+
+  let categoria = p.categoria.trim().toLowerCase();
+  let contenedor;
+
+  switch (categoria) {
+    case "niño":
+      contenedor = document.getElementById("catalogo-nino");
+      break;
+
+    case "niña":
+      contenedor = document.getElementById("catalogo-nina");
+      break;
+
+    case "bebe":
+    case "bebé":
+      contenedor = document.getElementById("catalogo-bebe");
+      break;
+
+    case "beba":
+      contenedor = document.getElementById("catalogo-beba");
+      break;
+
+    default:
+      console.warn("Categoría desconocida:", p.categoria);
+      return;
+  }
 
   const div = document.createElement("div");
   div.className = "producto";
@@ -59,7 +84,7 @@ function cerrarModal() {
 }
 
 // ================================
-// SECCIONES (Niño / Niña)
+// SECCIONES (Niño / Niña / Bebé / Beba)
 // ================================
 function mostrarSeccion(id) {
   document.querySelectorAll(".seccion").forEach(s => s.classList.remove("active"));
@@ -208,13 +233,15 @@ function enviarPedido() {
 }
 
 
-// Usa el tbody REAL de tu archivo
+// ================================
+// BUSCADOR MINI (ADMIN)
+// ================================
 const tbodyProductos = document.getElementById("tbody-productos");
 
 function filtrarPorID() {
   const idBuscado = document.getElementById("buscarID").value.trim();
 
-  const filas = tbodyProductos.querySelectorAll("tr");
+  const filas = tbodyProductos?.querySelectorAll("tr") ?? [];
 
   filas.forEach(fila => {
     const id = fila.querySelector("td").textContent.trim();
