@@ -166,8 +166,8 @@ function mostrarDatosPago() {
     datos.classList.remove("oculto");
 
     datos.innerHTML = `
-      <strong>CBU:</strong> 0000003100029384747298 <br>
-      <strong>Titular:</strong> Matías Avalo
+      <strong>CBU:</strong> 0930311710100845283600 <br>
+      <strong>Titular:</strong> Pequeños Gigantes
     `;
   }
   else if (pago === "mp") {
@@ -175,8 +175,8 @@ function mostrarDatosPago() {
     datos.classList.remove("oculto");
 
     datos.innerHTML = `
-      <strong>Alias:</strong> peque.gigantes.mp <br>
-      <strong>CVU:</strong> 000000790002839384845
+      <strong>Alias:</strong> peques.gigantes06 <br>
+      <strong>CVU:</strong> 0000003100146278369987
     `;
   }
   else {
@@ -207,24 +207,24 @@ function enviarPedido() {
 
   if (entrega === "envio") {
     msg += `%0A*Dirección:* ${document.getElementById("direccion").value}`;
-    msg += `%0A*Costo envío:* $1500`;
+    msg += `%0A*Costo envío:* $2000`;
   }
 
   if (pago === "transferencia") {
-    msg += `%0A%0A*CBU:* 0000003100029384747298`;
-    msg += `%0A*Titular:* Matías Avalo`;
+    msg += `%0A%0A*CBU:* 0930311710100845283600`;
+    msg += `%0A*Titular:* Peueños Gigantes`;
   }
 
   if (pago === "mp") {
-    msg += `%0A%0A*Alias:* peque.gigantes.mp`;
-    msg += `%0A*CVU:* 000000790002839384845`;
+    msg += `%0A%0A*Alias:* peques.gigantes06`;
+    msg += `%0A*CVU:* 0000003100146278369987`;
   }
 
   if (pago !== "tarjeta") {
     msg += `%0A*Celular:* ${document.getElementById("celular").value}`;
   }
 
-  window.open("https://wa.me/5492995952200?text=" + msg);
+  window.open("https://wa.me/5492996239628?text=" + msg);
 
   setTimeout(() => {
     carrito = [];
