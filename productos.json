@@ -8,5 +8,15 @@
     "stock": "1",
     "color": "AZUL",
     "talles": "2"
+  },
+  {
+    "id": 2,
+    "categoria": "beba",
+    "nombre": "Conjunto Isabel",
+    "precio": 21500,
+    "imagen": "imagenes/conjunto.jpg",
+    "stock": "4",
+    "color": "Lila, Rosa Chicle, Rosa Viejo, Celeste",
+    "talles": "3,4,5,6"
   }
 ]
