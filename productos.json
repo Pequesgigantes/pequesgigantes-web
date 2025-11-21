@@ -18,5 +18,15 @@
     "stock": 5,
     "color": "azul",
     "talles": "2,3,4,5,6"
+  },
+  {
+    "id": 2033,
+    "categoria": "niño",
+    "nombre": "Pantalon Corto ",
+    "precio": 25000,
+    "imagen": "imagenes/jeannegro.jpg",
+    "stock": "3",
+    "color": "Negro",
+    "talles": "12.2.3"
   }
 ]
