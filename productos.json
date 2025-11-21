@@ -1,22 +1,3 @@
 [
-  {
-    "id": 7,
-    "categoria": "niña",
-    "nombre": "Vestidos",
-    "precio": 20200,
-    "imagen": "imagenes/vestidos.jpg",
-    "stock": 6,
-    "color": "Consultar a Vendedor",
-    "talles": "4,6,8,10,12,14"
-  },
-  {
-    "id": 8,
-    "categoria": "niña",
-    "nombre": "Vestido jen",
-    "precio": 25000,
-    "imagen": "imagenes/vestido jean.jpg",
-    "stock": 5,
-    "color": "azul",
-    "talles": "2,3,4,5,6"
-  }
+  
 ]
