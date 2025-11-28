@@ -168,5 +168,225 @@
     "stock": "3",
     "color": "Blanca,Verde,beige",
     "talles": "2,3,4"
+  },
+  {
+    "id": 18,
+    "categoria": "bebe",
+    "nombre": "Remera Style",
+    "precio": 12900,
+    "imagen": "imagenes/Screenshot_20251020-112342_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Verde, Negro, Blamco, Marron",
+    "talles": "1,4,5,6"
+  },
+  {
+    "id": 19,
+    "categoria": "beba",
+    "nombre": "Remera Hilo",
+    "precio": 17800,
+    "imagen": "imagenes/Screenshot_20251020-112929_WhatsApp.jpg",
+    "stock": "2",
+    "color": "Rosa, Nwgro",
+    "talles": "3, 4"
+  },
+  {
+    "id": 20,
+    "categoria": "beba",
+    "nombre": "Vestido",
+    "precio": 24900,
+    "imagen": "imagenes/Screenshot_20251020-113020_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Verde, Rosa, Marron, Blanco",
+    "talles": "1,2,3,4"
+  },
+  {
+    "id": 21,
+    "categoria": "bebe",
+    "nombre": "Conjunto Lino Rayas",
+    "precio": 27200,
+    "imagen": "imagenes/Screenshot_20251020-113046_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Celeste, Negro, Marron",
+    "talles": "3,4,5,6"
+  },
+  {
+    "id": 22,
+    "categoria": "bebe",
+    "nombre": "Short Jean",
+    "precio": 21500,
+    "imagen": "imagenes/Screenshot_20251020-113108_WhatsApp.jpg",
+    "stock": "3",
+    "color": "celeste",
+    "talles": "245"
+  },
+  {
+    "id": 23,
+    "categoria": "beba",
+    "nombre": "Vestido Florci ",
+    "precio": 24900,
+    "imagen": "imagenes/Screenshot_20251020-113145_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Verde, Marron, Rosa",
+    "talles": "1, 3, 4"
+  },
+  {
+    "id": 24,
+    "categoria": "beba",
+    "nombre": "Palzo Brillos",
+    "precio": 16000,
+    "imagen": "imagenes/Screenshot_20251020-113220_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Marron, Celeste",
+    "talles": "2,3,6"
+  },
+  {
+    "id": 25,
+    "categoria": "niña",
+    "nombre": "Remera Be Cool",
+    "precio": 9000,
+    "imagen": "imagenes/Screenshot_20251022-101931_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Gris, Lila",
+    "talles": "8,10, 12"
+  },
+  {
+    "id": 26,
+    "categoria": "niña",
+    "nombre": "Remera Love",
+    "precio": 9000,
+    "imagen": "imagenes/Screenshot_20251022-101951_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Marron, Negra, Blanco",
+    "talles": "4, 10,12,14"
+  },
+  {
+    "id": 27,
+    "categoria": "niña",
+    "nombre": "Calza Estampada Larga",
+    "precio": 14700,
+    "imagen": "imagenes/Screenshot_20251022-102012_WhatsApp.jpg",
+    "stock": "6",
+    "color": "Blanco, Rosa, Print",
+    "talles": "46,8,10,12,14"
+  },
+  {
+    "id": 28,
+    "categoria": "niña",
+    "nombre": "Biker Basic",
+    "precio": 8600,
+    "imagen": "imagenes/Screenshot_20251022-102025_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Lila,Azul,Rosa",
+    "talles": "4,6,10"
+  },
+  {
+    "id": 29,
+    "categoria": "niña",
+    "nombre": "Biker Estampada Lycra",
+    "precio": 9000,
+    "imagen": "imagenes/Screenshot_20251022-102146_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Blanco, azul, rosa",
+    "talles": "4,8,10,12"
+  },
+  {
+    "id": 30,
+    "categoria": "niña",
+    "nombre": "Vestido Lino",
+    "precio": 27500,
+    "imagen": "imagenes/Screenshot_20251022-102103_WhatsApp.jpg",
+    "stock": "6",
+    "color": "Rosa, Negra, Blanco, Verde",
+    "talles": "4,6,8,10,12,14"
+  },
+  {
+    "id": 31,
+    "categoria": "niña",
+    "nombre": "Vestido Algodon largo",
+    "precio": 20200,
+    "imagen": "imagenes/Screenshot_20251022-102120_WhatsApp.jpg",
+    "stock": "5",
+    "color": "Rosa, Celeste, Amarillo , Blanco",
+    "talles": "3,4,6,8,10"
+  },
+  {
+    "id": 32,
+    "categoria": "niña",
+    "nombre": "Campera Rompeviento",
+    "precio": 28600,
+    "imagen": "imagenes/Screenshot_20251022-102207_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Lima, Rosa , Lila",
+    "talles": "6,10,12"
+  },
+  {
+    "id": 33,
+    "categoria": "niño",
+    "nombre": "Remera",
+    "precio": 10000,
+    "imagen": "imagenes/Screenshot_20251022-102358_WhatsApp.jpg",
+    "stock": "5",
+    "color": "Azul, Mostaza, Negro, Rojo",
+    "talles": "4, 6 ,8, 10"
+  },
+  {
+    "id": 34,
+    "categoria": "niño",
+    "nombre": "Chomba",
+    "precio": 18800,
+    "imagen": "imagenes/Screenshot_20251022-102413_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Azul, Blanco, Rojo",
+    "talles": "8, 10, 16"
+  },
+  {
+    "id": 35,
+    "categoria": "niño",
+    "nombre": "Campera Rompeviento",
+    "precio": 28600,
+    "imagen": "imagenes/Screenshot_20251022-102438_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Negro, Marron",
+    "talles": "6, 8, 12"
+  },
+  {
+    "id": 36,
+    "categoria": "niño",
+    "nombre": "Short",
+    "precio": 21500,
+    "imagen": "imagenes/Screenshot_20251022-102448_WhatsApp.jpg",
+    "stock": "5",
+    "color": "Negro, Verde, Gris",
+    "talles": "6,12,14,16"
+  },
+  {
+    "id": 37,
+    "categoria": "niño",
+    "nombre": "Campera combinada",
+    "precio": 30500,
+    "imagen": "imagenes/Screenshot_20251022-102458_WhatsApp.jpg",
+    "stock": "2",
+    "color": "Marron/negro, Verde/negro",
+    "talles": "6, 12"
+  },
+  {
+    "id": 38,
+    "categoria": "niño",
+    "nombre": "Bermuda Jean",
+    "precio": 17000,
+    "imagen": "imagenes/Screenshot_20251022-102516_WhatsApp.jpg",
+    "stock": "7",
+    "color": "Negro",
+    "talles": "4,6,8,10,12,14,16"
+  },
+  {
+    "id": 39,
+    "categoria": "niño",
+    "nombre": "Bermuda Jean",
+    "precio": 17000,
+    "imagen": "imagenes/Screenshot_20251022-102532_WhatsApp.jpg",
+    "stock": "7",
+    "color": "Celeste",
+    "talles": "4,6,8,10,12,14,16"
   }
 ]
