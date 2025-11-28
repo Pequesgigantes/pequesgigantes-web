@@ -5,18 +5,168 @@
     "nombre": "Vestido Jean ",
     "precio": 25000,
     "imagen": "imagenes/vestido jean.jpg",
-    "stock": "1",
+    "stock": "5",
     "color": "AZUL",
-    "talles": "2"
+    "talles": "2,3,4,5,6"
   },
   {
     "id": 2,
     "categoria": "beba",
-    "nombre": "Conjunto Isabel",
+    "nombre": "Conjunto  ISABELA",
     "precio": 21500,
     "imagen": "imagenes/conjunto.jpg",
     "stock": "4",
-    "color": "Lila, Rosa Chicle, Rosa Viejo, Celeste",
+    "color": "Rosa fluo, Rosa Viejo, Celeste",
+    "talles": "2,4,5,6"
+  },
+  {
+    "id": 3,
+    "categoria": "niña",
+    "nombre": "CALZA",
+    "precio": 19000,
+    "imagen": "Calzas",
+    "stock": "6",
+    "color": "VIOLETA, ROJA, GRIS, BORDO,VERDE, NEGRO",
+    "talles": "6/7, 8/9, 10, 12, 14, 16"
+  },
+  {
+    "id": 4,
+    "categoria": "bebe",
+    "nombre": "Pantalon Jean",
+    "precio": 26600,
+    "imagen": "imagenes/Screenshot_20250714-133948_WhatsApp.jpg",
+    "stock": "2",
+    "color": "Verde,Marron",
+    "talles": "3,4"
+  },
+  {
+    "id": 5,
+    "categoria": "bebe",
+    "nombre": "Conjunto Rayas",
+    "precio": 18500,
+    "imagen": "imagenes/Screenshot_20251001-182724_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Gris,Negro,Marron",
+    "talles": "1,2,3,4"
+  },
+  {
+    "id": 6,
+    "categoria": "beba",
+    "nombre": "Conjunto Dani",
+    "precio": 20500,
+    "imagen": "imagenes/Screenshot_20251001-182828_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Rosa Chicle,Marron,Rosa Bebe,Amarillo",
     "talles": "3,4,5,6"
+  },
+  {
+    "id": 7,
+    "categoria": "beba",
+    "nombre": "Conjunto Rosi",
+    "precio": 23800,
+    "imagen": "imagenes/Screenshot_20251001-183452_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Beige,Celeste",
+    "talles": "4,5,6"
+  },
+  {
+    "id": 8,
+    "categoria": "bebe",
+    "nombre": "Body Chomba",
+    "precio": 15900,
+    "imagen": "imagenes/Screenshot_20251002-102658_WhatsApp.jpg",
+    "stock": "5",
+    "color": "Beige,Negro,Azul,Blanco",
+    "talles": "1,2,3,4,5"
+  },
+  {
+    "id": 9,
+    "categoria": "bebe",
+    "nombre": "Remera Vans",
+    "precio": 12900,
+    "imagen": "imagenes/Screenshot_20251020-111818_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Bordo,Negro,blanco",
+    "talles": "2,3,4,5"
+  },
+  {
+    "id": 10,
+    "categoria": "beba",
+    "nombre": "Vestido Manga Princesa",
+    "precio": 25000,
+    "imagen": "imagenes/Screenshot_20251020-111924_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Lila,Camel",
+    "talles": "2,3,4,6"
+  },
+  {
+    "id": 11,
+    "categoria": "beba",
+    "nombre": "Vestido Camisero",
+    "precio": 25000,
+    "imagen": "imagenes/Screenshot_20251020-111950_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Salmon,Rosa",
+    "talles": "1,3,5"
+  },
+  {
+    "id": 12,
+    "categoria": "beba",
+    "nombre": "Vestido Amor",
+    "precio": 13700,
+    "imagen": "imagenes/Screenshot_20251020-112018_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Rosa,Rojo,Lila",
+    "talles": "2,3,5"
+  },
+  {
+    "id": 13,
+    "categoria": "bebe",
+    "nombre": "Jardinero",
+    "precio": 29500,
+    "imagen": "imagenes/Screenshot_20251020-112057_WhatsApp.jpg",
+    "stock": "2",
+    "color": "Beige,Negro",
+    "talles": "4,5"
+  },
+  {
+    "id": 14,
+    "categoria": "beba",
+    "nombre": "Jardinero",
+    "precio": 29500,
+    "imagen": "imagenes/Screenshot_20251020-112057_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Beige,Negro,Rosa",
+    "talles": "1,4,5"
+  },
+  {
+    "id": 15,
+    "categoria": "beba",
+    "nombre": "Jardinero Mom Corto",
+    "precio": 27200,
+    "imagen": "imagenes/Screenshot_20251020-112143_WhatsApp.jpg",
+    "stock": "2",
+    "color": "jean",
+    "talles": "1,5"
+  },
+  {
+    "id": 16,
+    "categoria": "bebe",
+    "nombre": "Jardinero Mom Corto",
+    "precio": 27200,
+    "imagen": "imagenes/Screenshot_20251020-112143_WhatsApp.jpg",
+    "stock": "2",
+    "color": "jean",
+    "talles": "1,5"
+  },
+  {
+    "id": 17,
+    "categoria": "beba",
+    "nombre": "Remera Flor",
+    "precio": 12500,
+    "imagen": "imagenes/Screenshot_20251020-112233_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Blanca,Verde,beige",
+    "talles": "2,3,4"
   }
 ]
