@@ -488,25 +488,5 @@
     "stock": "12",
     "color": "surtidos",
     "talles": "2 al 14"
-  },
-  {
-    "id": 50,
-    "categoria": "niña",
-    "nombre": "Jean cargo",
-    "precio": 38400,
-    "imagen": "imagenes/endyma-7-ea897d6ed9d740add117416364208713-1024-1024.webp",
-    "stock": "5",
-    "color": "Azul",
-    "talles": "8,10,12,14,16"
-  },
-  {
-    "id": 51,
-    "categoria": "niña",
-    "nombre": "Palazo",
-    "precio": 15000,
-    "imagen": "imagenes/1004961724-8d3c2fef55d07dd84417641639381864-1024-1024.webp",
-    "stock": "6",
-    "color": "Negro,Verde, Rosa,Violeta",
-    "talles": "6,8,10,12,14"
   }
 ]
