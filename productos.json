@@ -504,9 +504,59 @@
     "categoria": "niña",
     "nombre": "Calza Larga",
     "precio": 19000,
-    "imagen": "imagenes/Screenshot_20250710-114710_WhatsApp.jpg",
+    "imagen": "imagenes/Screenshot_20250710-114743_WhatsApp.jpg",
     "stock": "6",
     "color": "Violeta,Rojo,Gris,Bordo,Verde,Negro",
     "talles": "6/7,8/9,10,12,14,16"
+  },
+  {
+    "id": 52,
+    "categoria": "niña",
+    "nombre": "Remera",
+    "precio": 15600,
+    "imagen": "imagenes/Screenshot_20251202-114017_WhatsApp.jpg",
+    "stock": "6",
+    "color": "Negro,Verde,Rojo,Celeste,Blanco",
+    "talles": "6/7,8/9,10,12,14,16"
+  },
+  {
+    "id": 53,
+    "categoria": "bebe",
+    "nombre": "Conjunto Maxi",
+    "precio": 26000,
+    "imagen": "imagenes/Screenshot_20251202-113801_WhatsApp.jpg",
+    "stock": "5",
+    "color": "Marron,Negro,Beige",
+    "talles": "2,3,4,5,6"
+  },
+  {
+    "id": 54,
+    "categoria": "beba",
+    "nombre": "Campera Jean",
+    "precio": 26600,
+    "imagen": "imagenes/Screenshot_20251202-113848_WhatsApp.jpg",
+    "stock": "1",
+    "color": "Jean",
+    "talles": "5"
+  },
+  {
+    "id": 55,
+    "categoria": "bebe",
+    "nombre": "Conjunto Wafle",
+    "precio": 24900,
+    "imagen": "imagenes/Screenshot_20251202-113725_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Azul,Gris,Verde",
+    "talles": "2,3,6"
+  },
+  {
+    "id": 56,
+    "categoria": "bebe",
+    "nombre": "Pantalon Cargo",
+    "precio": 22600,
+    "imagen": "imagenes/Screenshot_20250705-105300_Drive.jpg",
+    "stock": "3",
+    "color": "Azul,Negro,Verde",
+    "talles": "2,3,5"
   }
 ]
