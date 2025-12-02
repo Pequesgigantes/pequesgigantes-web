@@ -20,16 +20,6 @@
     "talles": "2,4,5,6"
   },
   {
-    "id": 3,
-    "categoria": "niña",
-    "nombre": "CALZA",
-    "precio": 19000,
-    "imagen": "imagenes/Screenshot_20250710-114710_WhatsApp.jpg",
-    "stock": "6",
-    "color": "VIOLETA, ROJA, GRIS, BORDO,VERDE, NEGRO",
-    "talles": "6/7, 8/9, 10, 12, 14, 16"
-  },
-  {
     "id": 4,
     "categoria": "bebe",
     "nombre": "Pantalon Jean",
@@ -508,5 +498,15 @@
     "stock": "4",
     "color": "Blanco,Verde,Rosa,Marron",
     "talles": "2,3,5,6"
+  },
+  {
+    "id": 3,
+    "categoria": "niña",
+    "nombre": "Calza Larga",
+    "precio": 19000,
+    "imagen": "imagenes/Screenshot_20250710-114710_WhatsApp.jpg",
+    "stock": "6",
+    "color": "Violeta,Rojo,Gris,Bordo,Verde,Negro",
+    "talles": "6/7,8/9,10,12,14,16"
   }
 ]
