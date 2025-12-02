@@ -24,7 +24,7 @@
     "categoria": "niña",
     "nombre": "CALZA",
     "precio": 19000,
-    "imagen": "Calzas",
+    "imagen": "imagenes/Screenshot_20250710-114710_WhatsApp.jpg",
     "stock": "6",
     "color": "VIOLETA, ROJA, GRIS, BORDO,VERDE, NEGRO",
     "talles": "6/7, 8/9, 10, 12, 14, 16"
@@ -488,5 +488,25 @@
     "stock": "12",
     "color": "surtidos",
     "talles": "2 al 14"
+  },
+  {
+    "id": 50,
+    "categoria": "beba",
+    "nombre": "Conjunto Sastrero Liso",
+    "precio": 27500,
+    "imagen": "imagenes/WhatsApp Image 2025-11-28 at 22.06.27.jpeg",
+    "stock": "4",
+    "color": "Beige,Marron,Rosa,Lila",
+    "talles": "2,3,5,6"
+  },
+  {
+    "id": 51,
+    "categoria": "beba",
+    "nombre": "Conjunto Sastrero Estampado",
+    "precio": 27200,
+    "imagen": "imagenes/Screenshot_20251023-101736_WhatsApp.jpg",
+    "stock": "4",
+    "color": "Blanco,Verde,Rosa,Marron",
+    "talles": "2,3,5,6"
   }
 ]
