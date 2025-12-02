@@ -558,5 +558,16 @@
     "stock": "3",
     "color": "Azul,Negro,Verde",
     "talles": "2,3,5"
+  },
+  null,
+  {
+    "id": 58,
+    "categoria": "niño",
+    "nombre": "Bermuda",
+    "precio": 15600,
+    "imagen": "imagenes/Screenshot_20251202-120411_WhatsApp.jpg",
+    "stock": "3",
+    "color": "Roja,Azul claro,Azul Oscuro",
+    "talles": "6/7,8/9,14"
   }
 ]
