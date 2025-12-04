@@ -724,3 +724,68 @@ body {
 }
 
 
+/* === BOTONES FLOTANTES FIJOS ARRIBA === */
+.boton-top {
+    position: fixed;
+    right: 15px;
+    width: 55px;
+    height: 55px;
+    border-radius: 18px;
+    background: rgba(255, 215, 0, 0.45);
+    backdrop-filter: blur(6px);
+    border: 2px solid #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    z-index: 9999;
+    transition: 0.25s ease;
+}
+
+.boton-top:hover {
+    transform: scale(1.12);
+}
+
+/* --- POSICIONES FIJAS --- */
+#btn-instagram {
+    top: 20px;
+}
+
+#btn-visitas {
+    top: 90px;
+}
+
+#btn-like {
+    top: 155px;
+}
+
+/* --- MODO CELULAR: MÁS CHICOS Y MÁS PEGADOS ARRIBA --- */
+@media (max-width: 480px) {
+
+    .boton-top {
+        width: 45px;
+        height: 45px;
+        right: 10px;
+        border-radius: 15px;
+        font-size: 16px;
+    }
+
+    #btn-instagram {
+        top: 15px;
+    }
+
+    #btn-visitas {
+        top: 75px;
+    }
+
+    #btn-like {
+        top: 130px;
+    }
+}
+/* === ELIMINAR BOTÓN LIKE ANTERIOR PARA QUE NO SE DUPLIQUE === */
+.like-btn {
+    display: none !important;
+}
