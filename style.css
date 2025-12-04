@@ -462,20 +462,17 @@ body {
 
 
 .insta-top {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  background: #d62976;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  z-index: 9999;
-  transition: 0.2s ease-in-out;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .insta-top img {
   width: 26px;
@@ -655,3 +652,75 @@ body {
         height: 22px;
     }
 }
+
+/* === CONTADOR DE VISITAS REAL (IZQUIERDA) === */
+.contador-real {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    color: #f5d76e;
+    font-size: 18px;
+    font-weight: bold;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 9999;
+}
+
+.contador-real .icono {
+    font-size: 20px;
+}
+
+/* === ANIMACIÓN ZOOM DEL MODAL === */
+.modal-contenido {
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.modal.show .modal-contenido {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* === BOTÓN DE LIKE === */
+.like-btn {
+    position: fixed;
+    top: 90px; /* justo debajo del Instagram */
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.15); /* transparencia */
+    border: 2px solid #d4af37; /* borde dorado */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #d4af37;
+    font-size: 22px;
+    font-weight: bold;
+    
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    transition: 0.25s ease;
+    z-index: 9999;
+}
+
+.like-btn:hover {
+    transform: scale(1.12);
+    background: rgba(255,255,255,0.25);
+}
+
+

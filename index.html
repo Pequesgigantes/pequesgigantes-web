@@ -11,14 +11,25 @@
 
 <body>
 
-<!-- BOTÓN INSTAGRAM ARRIBA A LA DERECHA -->
-<a href="https://www.instagram.com/pequesgigantes2025?igsh=bHozdnQ3NWdieTg0"
+<!-- Contador REAL fuera del header -->
+<div id="contador-real" class="contador-real">
+  <span class="icono">👁️</span>
+  <span id="visitas-num">0</span>
+</div>
+
+<!-- INSTAGRAM -->
+<a href="https://www.instagram.com/pequesgigantes2025"
    target="_blank"
    class="insta-top">
   <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
 </a>
 
-<!-- LOGO + TÍTULO + MENÚ -->
+<!-- BOTÓN LIKE -->
+<div id="btn-like" class="like-btn">
+    👍 <span id="like-count">0</span>
+</div>
+
+<!-- HEADER -->
 <div class="header-contenedor">
     <img src="Logo/logo.png" class="logo-redondo" alt="Logo Pequeños Gigantes">
     <h1 class="titulo-pequenos">Pequeños Gigantes</h1>
@@ -31,31 +42,28 @@
     </nav>
 </div>
 
-<!-- === CATÁLOGO NIÑO === -->
+<!-- SECCIONES -->
 <section id="nino" class="seccion active">
   <h2 class="titulo-catalogo">Niño</h2>
   <div id="catalogo-nino" class="catalogo"></div>
 </section>
 
-<!-- === CATÁLOGO NIÑA === -->
 <section id="nina" class="seccion">
   <h2 class="titulo-catalogo">Niña</h2>
   <div id="catalogo-nina" class="catalogo"></div>
 </section>
 
-<!-- === CATÁLOGO BEBÉ === -->
 <section id="bebe" class="seccion">
   <h2 class="titulo-catalogo">Bebé</h2>
   <div id="catalogo-bebe" class="catalogo"></div>
 </section>
 
-<!-- === CATÁLOGO BEBA === -->
 <section id="beba" class="seccion">
   <h2 class="titulo-catalogo">Beba</h2>
   <div id="catalogo-beba" class="catalogo"></div>
 </section>
 
-<!-- === CARRITO === -->
+<!-- CARRITO -->
 <div id="carrito" class="carrito">
     <h3>🛒 Carrito</h3>
 
@@ -82,12 +90,12 @@
     <button class="btn" onclick="enviarPedido()">Enviar Pedido</button>
 </div>
 
-<!-- BOTÓN FLOTANTE CARRITO -->
+<!-- BOTÓN FLOTANTE -->
 <div id="btn-carrito-flotante" onclick="toggleCarrito()">
     🛍️ <span id="contador-flotante">0</span>
 </div>
 
-<!-- === MODAL PRODUCTO === -->
+<!-- MODAL -->
 <div id="modal-producto" class="modal oculto">
     <div class="modal-contenido">
 
@@ -98,13 +106,11 @@
         <h2 id="modal-nombre"></h2>
         <p id="modal-precio" class="modal-precio"></p>
 
-        <!-- BLOQUE TALLES -->
         <div class="bloque-talle">
             <label><strong>Seleccionar talle:</strong></label>
             <div id="talle-opciones" class="talle-opciones"></div>
         </div>
 
-        <!-- BLOQUE CANTIDAD -->
         <div class="bloque-cantidad">
             <label><strong>Cantidad:</strong></label>
             <div class="cantidad-contenedor">

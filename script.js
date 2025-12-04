@@ -9,7 +9,7 @@ fetch("productos.json")
   .then(res => res.json())
   .then(productos => {
     productos.forEach(p => {
-      renderProducto(p);
+      if (p) renderProducto(p);
     });
   })
   .catch(err => {
@@ -28,20 +28,15 @@ function renderProducto(p) {
     case "niño":
       contenedor = document.getElementById("catalogo-nino");
       break;
-
     case "niña":
       contenedor = document.getElementById("catalogo-nina");
       break;
-
     case "bebe":
-    case "bebé":
       contenedor = document.getElementById("catalogo-bebe");
       break;
-
     case "beba":
       contenedor = document.getElementById("catalogo-beba");
       break;
-
     default:
       console.warn("Categoría desconocida:", p.categoria);
       return;
@@ -65,73 +60,78 @@ function renderProducto(p) {
 // ================================
 function verProducto(p) {
 
-    // ========== CARGAR DATOS ==========
-    document.getElementById("modal-imagen").src = p.imagen;
-    document.getElementById("modal-nombre").innerText = p.nombre;
-    document.getElementById("modal-precio").innerText = "$" + p.precio;
-    document.getElementById("modal-stock").innerText = p.stock;
-    document.getElementById("modal-color").innerText = p.color;
+  document.getElementById("modal-imagen").src = p.imagen;
+  document.getElementById("modal-nombre").innerText = p.nombre;
+  document.getElementById("modal-precio").innerText = "$" + p.precio;
+  document.getElementById("modal-stock").innerText = p.stock;
+  document.getElementById("modal-color").innerText = p.color;
 
-    // ========== GENERAR BOTONES DE TALLE ==========
-    const contenedorTalles = document.getElementById("talle-opciones");
-    contenedorTalles.innerHTML = "";
+  const contenedorTalles = document.getElementById("talle-opciones");
+  contenedorTalles.innerHTML = "";
 
-    let talleSeleccionado = null;
+  let talleSeleccionado = null;
 
-    if (p.talles) {
-        p.talles.split(",").forEach(t => {
-            const btn = document.createElement("div");
-            btn.classList.add("talle-opcion");
-            btn.innerText = t.trim();
+  // === VALIDACIÓN DE TALLES ===
+  if (!p.talles || p.talles.trim() === "" || p.talles === "Sin talle") {
+      contenedorTalles.innerHTML = "<p style='margin-top:10px;'>Sin talles</p>";
+  } else {
+      p.talles.split(",").forEach(t => {
+          const btn = document.createElement("div");
+          btn.classList.add("talle-opcion");
+          btn.innerText = t.trim();
 
-            btn.onclick = () => {
-                document.querySelectorAll(".talle-opcion").forEach(b => b.classList.remove("selected"));
-                btn.classList.add("selected");
-                talleSeleccionado = t.trim();
-            };
+          btn.onclick = () => {
+              document.querySelectorAll(".talle-opcion").forEach(b => b.classList.remove("selected"));
+              btn.classList.add("selected");
+              talleSeleccionado = t.trim();
+          };
 
-            contenedorTalles.appendChild(btn);
-        });
-    }
+          contenedorTalles.appendChild(btn);
+      });
+  }
 
-    // ========== CANTIDAD + / - ==========
-    let cantidadActual = 1;
-    document.getElementById("cantidad-valor").innerText = cantidadActual;
+  let cantidadActual = 1;
+  document.getElementById("cantidad-valor").innerText = cantidadActual;
 
-    document.getElementById("btn-sumar").onclick = () => {
-        cantidadActual++;
-        document.getElementById("cantidad-valor").innerText = cantidadActual;
-    };
+  document.getElementById("btn-sumar").onclick = () => {
+      cantidadActual++;
+      document.getElementById("cantidad-valor").innerText = cantidadActual;
+  };
 
-    document.getElementById("btn-restar").onclick = () => {
-        if (cantidadActual > 1) {
-            cantidadActual--;
-            document.getElementById("cantidad-valor").innerText = cantidadActual;
-        }
-    };
+  document.getElementById("btn-restar").onclick = () => {
+      if (cantidadActual > 1) {
+          cantidadActual--;
+          document.getElementById("cantidad-valor").innerText = cantidadActual;
+      }
+  };
 
-    // ========== AGREGAR AL CARRITO ==========
-    document.getElementById("modal-agregar").onclick = () => {
+  document.getElementById("modal-agregar").onclick = () => {
+      if (!talleSeleccionado && p.talles !== "Sin talle") {
+          alert("Seleccioná un talle");
+          return;
+      }
+      agregarAlCarrito(p, talleSeleccionado ?? "Sin talle", cantidadActual);
+      cerrarModal();
+  };
 
-        if (!talleSeleccionado) {
-            alert("Seleccioná un talle");
-            return;
-        }
+  const modal = document.getElementById("modal-producto");
+  modal.classList.remove("oculto");
 
-        agregarAlCarrito(p, talleSeleccionado, cantidadActual);
-        cerrarModal();
-    };
-
-    // Mostrar modal
-    document.getElementById("modal-producto").classList.remove("oculto");
+  setTimeout(() => {
+      modal.classList.add("show");
+  }, 10);
 }
 
 function cerrarModal() {
-  document.getElementById("modal-producto").classList.add("oculto");
+  const modal = document.getElementById("modal-producto");
+  modal.classList.remove("show");
+  setTimeout(() => {
+      modal.classList.add("oculto");
+  }, 200);
 }
 
 // ================================
-// SECCIONES (Niño / Niña / Bebé / Beba)
+// SECCIONES
 // ================================
 function mostrarSeccion(id) {
   document.querySelectorAll(".seccion").forEach(s => s.classList.remove("active"));
@@ -146,12 +146,7 @@ function toggleCarrito() {
 }
 
 function agregarAlCarrito(p, talle, cantidad) {
-  carrito.push({
-    ...p,
-    talle: talle,
-    cantidad: cantidad
-  });
-
+  carrito.push({ ...p, talle, cantidad });
   actualizarCarrito();
 }
 
@@ -162,10 +157,10 @@ function actualizarCarrito() {
   let total = 0;
 
   carrito.forEach((p, i) => {
-    const subtotal = p.precio * p.cantidad;
-    total += subtotal;
+      const subtotal = p.precio * p.cantidad;
+      total += subtotal;
 
-    cont.innerHTML += `
+      cont.innerHTML += `
       <div class="carrito-item">
         <div class="info">
           <strong>${p.nombre}</strong><br>
@@ -178,9 +173,7 @@ function actualizarCarrito() {
     `;
   });
 
-  if (document.getElementById("entrega").value === "envio") {
-    total += 2000;
-  }
+  if (document.getElementById("entrega").value === "envio") total += 2000;
 
   document.getElementById("contador-flotante").innerText = carrito.length;
   document.getElementById("total").innerText = "Total: $" + total;
@@ -198,11 +191,10 @@ function mostrarDireccion() {
   const entrega = document.getElementById("entrega").value;
   const dir = document.getElementById("direccion");
 
-  if (entrega === "envio") {
-    dir.classList.remove("oculto");
-  } else {
-    dir.classList.add("oculto");
-    dir.value = "";
+  if (entrega === "envio") dir.classList.remove("oculto");
+  else {
+      dir.classList.add("oculto");
+      dir.value = "";
   }
 
   actualizarCarrito();
@@ -213,7 +205,6 @@ function mostrarDireccion() {
 // ================================
 function mostrarDatosPago() {
   const pago = document.getElementById("pago").value;
-  const cel = document.getElementById("celular");
   const datos = document.getElementById("datos-pago");
 
   if (pago === "transferencia") {
@@ -222,15 +213,13 @@ function mostrarDatosPago() {
       <strong>CBU:</strong> 0930311710100845283600 <br>
       <strong>Titular:</strong> Pequeños Gigantes
     `;
-  }
-  else if (pago === "mp") {
+  } else if (pago === "mp") {
     datos.classList.remove("oculto");
     datos.innerHTML = `
       <strong>Alias:</strong> peques.gigantes06 <br>
       <strong>CVU:</strong> 0000003100146278369987
     `;
-  }
-  else {
+  } else {
     datos.classList.add("oculto");
     datos.innerHTML = "";
   }
@@ -276,3 +265,46 @@ function enviarPedido() {
     window.location.reload();
   }, 1200);
 }
+
+// ================================
+// CONTADOR REAL (CountAPI)
+// ================================
+async function contarVisitasReales() {
+  try {
+      const res = await fetch("https://api.countapi.xyz/hit/pequesgigantes/visitas");
+      const data = await res.json();
+      document.getElementById("visitas-num").innerText = data.value;
+  } catch (err) {
+      console.error("Error contador:", err);
+  }
+}
+contarVisitasReales();
+
+
+// ================================
+// LIKE GLOBAL REAL (CountAPI)
+// ================================
+async function cargarLikes() {
+    const res = await fetch("https://api.countapi.xyz/get/pequesgigantes/likes");
+    const data = await res.json();
+    document.getElementById("like-count").innerText = data.value ?? 0;
+}
+
+async function sumarLike() {
+    // Evita que la misma persona de like varias veces
+    if (localStorage.getItem("like-dado") === "1") {
+        alert("¡Ya diste like! ❤️");
+        return;
+    }
+
+    const res = await fetch("https://api.countapi.xyz/hit/pequesgigantes/likes");
+    const data = await res.json();
+
+    document.getElementById("like-count").innerText = data.value;
+    localStorage.setItem("like-dado", "1");
+}
+
+document.getElementById("btn-like").onclick = sumarLike;
+
+// Cargar likes al iniciar
+cargarLikes();

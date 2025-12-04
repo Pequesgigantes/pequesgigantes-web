@@ -2,31 +2,31 @@
   {
     "id": 1,
     "categoria": "beba",
-    "nombre": "Vestido Jean ",
+    "nombre": "Vestido Jean",
     "precio": 25000,
     "imagen": "imagenes/vestido jean.jpg",
     "stock": "5",
-    "color": "AZUL",
+    "color": "Azul",
     "talles": "2,3,4,5,6"
   },
   {
     "id": 2,
     "categoria": "beba",
-    "nombre": "Conjunto  ISABELA",
+    "nombre": "Conjunto Isabela",
     "precio": 21500,
     "imagen": "imagenes/conjunto.jpg",
     "stock": "4",
-    "color": "Rosa fluo, Rosa Viejo, Celeste",
+    "color": "Rosa fluo, Rosa viejo, Celeste",
     "talles": "2,4,5,6"
   },
   {
     "id": 4,
     "categoria": "bebe",
-    "nombre": "Pantalon Jean",
+    "nombre": "Pantalón Jean",
     "precio": 26600,
     "imagen": "imagenes/Screenshot_20250714-133948_WhatsApp.jpg",
     "stock": "2",
-    "color": "Verde,Marron",
+    "color": "Verde, Marrón",
     "talles": "3,4"
   },
   {
@@ -36,7 +36,7 @@
     "precio": 18500,
     "imagen": "imagenes/Screenshot_20251001-182724_WhatsApp.jpg",
     "stock": "4",
-    "color": "Gris,Negro,Marron",
+    "color": "Gris, Negro, Marrón",
     "talles": "1,2,3,4"
   },
   {
@@ -46,7 +46,7 @@
     "precio": 20500,
     "imagen": "imagenes/Screenshot_20251001-182828_WhatsApp.jpg",
     "stock": "4",
-    "color": "Rosa Chicle,Marron,Rosa Bebe,Amarillo",
+    "color": "Rosa Chicle, Marrón, Rosa bebé, Amarillo",
     "talles": "3,4,5,6"
   },
   {
@@ -56,7 +56,7 @@
     "precio": 23800,
     "imagen": "imagenes/Screenshot_20251001-183452_WhatsApp.jpg",
     "stock": "3",
-    "color": "Beige,Celeste",
+    "color": "Beige, Celeste",
     "talles": "4,5,6"
   },
   {
@@ -66,7 +66,7 @@
     "precio": 15900,
     "imagen": "imagenes/Screenshot_20251002-102658_WhatsApp.jpg",
     "stock": "5",
-    "color": "Beige,Negro,Azul,Blanco",
+    "color": "Beige, Negro, Azul, Blanco",
     "talles": "1,2,3,4,5"
   },
   {
@@ -76,7 +76,7 @@
     "precio": 12900,
     "imagen": "imagenes/Screenshot_20251020-111818_WhatsApp.jpg",
     "stock": "4",
-    "color": "Bordo,Negro,blanco",
+    "color": "Bordo, Negro, Blanco",
     "talles": "2,3,4,5"
   },
   {
@@ -86,7 +86,7 @@
     "precio": 25000,
     "imagen": "imagenes/Screenshot_20251020-111924_WhatsApp.jpg",
     "stock": "4",
-    "color": "Lila,Camel",
+    "color": "Lila, Camel",
     "talles": "2,3,4,6"
   },
   {
@@ -96,7 +96,7 @@
     "precio": 25000,
     "imagen": "imagenes/Screenshot_20251020-111950_WhatsApp.jpg",
     "stock": "3",
-    "color": "Salmon,Rosa",
+    "color": "Salmón, Rosa",
     "talles": "1,3,5"
   },
   {
@@ -106,7 +106,7 @@
     "precio": 13700,
     "imagen": "imagenes/Screenshot_20251020-112018_WhatsApp.jpg",
     "stock": "3",
-    "color": "Rosa,Rojo,Lila",
+    "color": "Rosa, Rojo, Lila",
     "talles": "2,3,5"
   },
   {
@@ -116,7 +116,7 @@
     "precio": 29500,
     "imagen": "imagenes/Screenshot_20251020-112057_WhatsApp.jpg",
     "stock": "2",
-    "color": "Beige,Negro",
+    "color": "Beige, Negro",
     "talles": "4,5"
   },
   {
@@ -126,7 +126,7 @@
     "precio": 29500,
     "imagen": "imagenes/Screenshot_20251020-112057_WhatsApp.jpg",
     "stock": "3",
-    "color": "Beige,Negro,Rosa",
+    "color": "Beige, Negro, Rosa",
     "talles": "1,4,5"
   },
   {
@@ -136,7 +136,7 @@
     "precio": 27200,
     "imagen": "imagenes/Screenshot_20251020-112143_WhatsApp.jpg",
     "stock": "2",
-    "color": "jean",
+    "color": "Jean",
     "talles": "1,5"
   },
   {
@@ -146,7 +146,7 @@
     "precio": 27200,
     "imagen": "imagenes/Screenshot_20251020-112143_WhatsApp.jpg",
     "stock": "2",
-    "color": "jean",
+    "color": "Jean",
     "talles": "1,5"
   },
   {
@@ -156,7 +156,7 @@
     "precio": 12500,
     "imagen": "imagenes/Screenshot_20251020-112233_WhatsApp.jpg",
     "stock": "3",
-    "color": "Blanca,Verde,beige",
+    "color": "Blanca, Verde, Beige",
     "talles": "2,3,4"
   },
   {
@@ -166,7 +166,7 @@
     "precio": 12900,
     "imagen": "imagenes/Screenshot_20251020-112342_WhatsApp.jpg",
     "stock": "4",
-    "color": "Verde, Negro, Blamco, Marron",
+    "color": "Verde, Negro, Blanco, Marrón",
     "talles": "1,4,5,6"
   },
   {
@@ -176,8 +176,8 @@
     "precio": 17800,
     "imagen": "imagenes/Screenshot_20251020-112929_WhatsApp.jpg",
     "stock": "2",
-    "color": "Rosa, Nwgro",
-    "talles": "3, 4"
+    "color": "Rosa, Negro",
+    "talles": "3,4"
   },
   {
     "id": 20,
@@ -186,7 +186,7 @@
     "precio": 24900,
     "imagen": "imagenes/Screenshot_20251020-113020_WhatsApp.jpg",
     "stock": "4",
-    "color": "Verde, Rosa, Marron, Blanco",
+    "color": "Verde, Rosa, Marrón, Blanco",
     "talles": "1,2,3,4"
   },
   {
@@ -196,7 +196,7 @@
     "precio": 27200,
     "imagen": "imagenes/Screenshot_20251020-113046_WhatsApp.jpg",
     "stock": "4",
-    "color": "Celeste, Negro, Marron",
+    "color": "Celeste, Negro, Marrón",
     "talles": "3,4,5,6"
   },
   {
@@ -206,27 +206,27 @@
     "precio": 21500,
     "imagen": "imagenes/Screenshot_20251020-113108_WhatsApp.jpg",
     "stock": "3",
-    "color": "celeste",
-    "talles": "245"
+    "color": "Celeste",
+    "talles": "2,4,5"
   },
   {
     "id": 23,
     "categoria": "beba",
-    "nombre": "Vestido Florci ",
+    "nombre": "Vestido Florci",
     "precio": 24900,
     "imagen": "imagenes/Screenshot_20251020-113145_WhatsApp.jpg",
     "stock": "3",
-    "color": "Verde, Marron, Rosa",
-    "talles": "1, 3, 4"
+    "color": "Verde, Marrón, Rosa",
+    "talles": "1,3,4"
   },
   {
     "id": 24,
     "categoria": "beba",
-    "nombre": "Palzo Brillos",
+    "nombre": "Palazo Brillos",
     "precio": 16000,
     "imagen": "imagenes/Screenshot_20251020-113220_WhatsApp.jpg",
     "stock": "3",
-    "color": "Marron, Celeste",
+    "color": "Marrón, Celeste",
     "talles": "2,3,6"
   },
   {
@@ -237,7 +237,7 @@
     "imagen": "imagenes/Screenshot_20251022-101931_WhatsApp.jpg",
     "stock": "3",
     "color": "Gris, Lila",
-    "talles": "8,10, 12"
+    "talles": "8,10,12"
   },
   {
     "id": 26,
@@ -246,8 +246,8 @@
     "precio": 9000,
     "imagen": "imagenes/Screenshot_20251022-101951_WhatsApp.jpg",
     "stock": "4",
-    "color": "Marron, Negra, Blanco",
-    "talles": "4, 10,12,14"
+    "color": "Marrón, Negra, Blanco",
+    "talles": "4,10,12,14"
   },
   {
     "id": 27,
@@ -257,7 +257,7 @@
     "imagen": "imagenes/Screenshot_20251022-102012_WhatsApp.jpg",
     "stock": "6",
     "color": "Blanco, Rosa, Print",
-    "talles": "46,8,10,12,14"
+    "talles": "4,6,8,10,12,14"
   },
   {
     "id": 28,
@@ -266,7 +266,7 @@
     "precio": 8600,
     "imagen": "imagenes/Screenshot_20251022-102025_WhatsApp.jpg",
     "stock": "3",
-    "color": "Lila,Azul,Rosa",
+    "color": "Lila, Azul, Rosa",
     "talles": "4,6,10"
   },
   {
@@ -276,7 +276,7 @@
     "precio": 9000,
     "imagen": "imagenes/Screenshot_20251022-102146_WhatsApp.jpg",
     "stock": "4",
-    "color": "Blanco, azul, rosa",
+    "color": "Blanco, Azul, Rosa",
     "talles": "4,8,10,12"
   },
   {
@@ -292,11 +292,11 @@
   {
     "id": 31,
     "categoria": "niña",
-    "nombre": "Vestido Algodon largo",
+    "nombre": "Vestido Algodón Largo",
     "precio": 20200,
     "imagen": "imagenes/Screenshot_20251022-102120_WhatsApp.jpg",
     "stock": "5",
-    "color": "Rosa, Celeste, Amarillo , Blanco",
+    "color": "Rosa, Celeste, Amarillo, Blanco",
     "talles": "3,4,6,8,10"
   },
   {
@@ -306,7 +306,7 @@
     "precio": 28600,
     "imagen": "imagenes/Screenshot_20251022-102207_WhatsApp.jpg",
     "stock": "3",
-    "color": "Lima, Rosa , Lila",
+    "color": "Lima, Rosa, Lila",
     "talles": "6,10,12"
   },
   {
@@ -317,7 +317,7 @@
     "imagen": "imagenes/Screenshot_20251022-102358_WhatsApp.jpg",
     "stock": "5",
     "color": "Azul, Mostaza, Negro, Rojo",
-    "talles": "4, 6 ,8, 10"
+    "talles": "4,6,8,10"
   },
   {
     "id": 34,
@@ -327,7 +327,7 @@
     "imagen": "imagenes/Screenshot_20251022-102413_WhatsApp.jpg",
     "stock": "3",
     "color": "Azul, Blanco, Rojo",
-    "talles": "8, 10, 16"
+    "talles": "8,10,16"
   },
   {
     "id": 35,
@@ -336,8 +336,8 @@
     "precio": 28600,
     "imagen": "imagenes/Screenshot_20251022-102438_WhatsApp.jpg",
     "stock": "3",
-    "color": "Negro, Marron",
-    "talles": "6, 8, 12"
+    "color": "Negro, Marrón",
+    "talles": "6,8,12"
   },
   {
     "id": 36,
@@ -352,12 +352,12 @@
   {
     "id": 37,
     "categoria": "niño",
-    "nombre": "Campera combinada",
+    "nombre": "Campera Combinada",
     "precio": 30500,
     "imagen": "imagenes/Screenshot_20251022-102458_WhatsApp.jpg",
     "stock": "2",
-    "color": "Marron/negro, Verde/negro",
-    "talles": "6, 12"
+    "color": "Marrón/Negro, Verde/Negro",
+    "talles": "6,12"
   },
   {
     "id": 38,
@@ -387,16 +387,16 @@
     "imagen": "imagenes/IMG-20250705-WA0006.jpg",
     "stock": "5",
     "color": "Negro",
-    "talles": "4,8,,10,12,14"
+    "talles": "4,8,10,12,14"
   },
   {
     "id": 41,
     "categoria": "niña",
-    "nombre": "Vestido tirantes",
+    "nombre": "Vestido Tirantes",
     "precio": 27200,
     "imagen": "imagenes/IMG-20250721-WA0009.jpg",
     "stock": "1",
-    "color": "Flores Amarillas",
+    "color": "Flores amarillas",
     "talles": "10"
   },
   {
@@ -407,32 +407,32 @@
     "imagen": "imagenes/IMG-20250724-WA0035.jpg",
     "stock": "2",
     "color": "Violeta, Rosa",
-    "talles": ""
+    "talles": "Sin talle"
   },
   {
     "id": 43,
     "categoria": "niña",
-    "nombre": "Calza algodón estampada",
+    "nombre": "Calza Algodón Estampada",
     "precio": 17800,
     "imagen": "imagenes/IMG-20250724-WA0036.jpg",
     "stock": "4",
-    "color": "Flores, Celeste,Rosa",
+    "color": "Flores, Celeste, Rosa",
     "talles": "4,5,10"
   },
   {
     "id": 44,
     "categoria": "niño",
-    "nombre": "Pantalon Cargo",
+    "nombre": "Pantalón Cargo",
     "precio": 27900,
     "imagen": "imagenes/Screenshot_20250705-105300_Drive.jpg",
     "stock": "3",
-    "color": "Verde,Camel",
+    "color": "Verde, Camel",
     "talles": "8,12,14"
   },
   {
     "id": 45,
     "categoria": "niña",
-    "nombre": "Palazo jean",
+    "nombre": "Palazo Jean",
     "precio": 18800,
     "imagen": "imagenes/Screenshot_20250705-105805_Drive.jpg",
     "stock": "2",
@@ -452,11 +452,11 @@
   {
     "id": 47,
     "categoria": "bebe",
-    "nombre": "Pantalon jean",
+    "nombre": "Pantalón Jean",
     "precio": 21700,
     "imagen": "imagenes/Screenshot_20250714-134043_WhatsApp.jpg",
     "stock": "6",
-    "color": "Azul,Celeste",
+    "color": "Azul, Celeste",
     "talles": "1,2,3,5"
   },
   {
@@ -467,7 +467,7 @@
     "imagen": "imagenes/Screenshot_20251022-102800_WhatsApp.jpg",
     "stock": "12",
     "color": "Surtidos",
-    "talles": "2 al 14"
+    "talles": "2,4,6,8,10,12,14"
   },
   {
     "id": 49,
@@ -476,8 +476,8 @@
     "precio": 6000,
     "imagen": "imagenes/Screenshot_20251022-102842_WhatsApp.jpg",
     "stock": "12",
-    "color": "surtidos",
-    "talles": "2 al 14"
+    "color": "Surtidos",
+    "talles": "2,4,6,8,10,12,14"
   },
   {
     "id": 50,
@@ -486,7 +486,7 @@
     "precio": 27500,
     "imagen": "imagenes/WhatsApp Image 2025-11-28 at 22.06.27.jpeg",
     "stock": "4",
-    "color": "Beige,Marron,Rosa,Lila",
+    "color": "Beige, Marrón, Rosa, Lila",
     "talles": "2,3,5,6"
   },
   {
@@ -496,18 +496,8 @@
     "precio": 27200,
     "imagen": "imagenes/Screenshot_20251023-101736_WhatsApp.jpg",
     "stock": "4",
-    "color": "Blanco,Verde,Rosa,Marron",
+    "color": "Blanco, Verde, Rosa, Marrón",
     "talles": "2,3,5,6"
-  },
-  {
-    "id": 3,
-    "categoria": "niña",
-    "nombre": "Calza Larga",
-    "precio": 19000,
-    "imagen": "imagenes/Screenshot_20250710-114743_WhatsApp.jpg",
-    "stock": "6",
-    "color": "Violeta,Rojo,Gris,Bordo,Verde,Negro",
-    "talles": "6/7,8/9,10,12,14,16"
   },
   {
     "id": 52,
@@ -516,7 +506,7 @@
     "precio": 15600,
     "imagen": "imagenes/Screenshot_20251202-114017_WhatsApp.jpg",
     "stock": "6",
-    "color": "Negro,Verde,Rojo,Celeste,Blanco",
+    "color": "Negro, Verde, Rojo, Celeste, Blanco",
     "talles": "6/7,8/9,10,12,14,16"
   },
   {
@@ -526,7 +516,7 @@
     "precio": 26000,
     "imagen": "imagenes/Screenshot_20251202-113801_WhatsApp.jpg",
     "stock": "5",
-    "color": "Marron,Negro,Beige",
+    "color": "Marrón, Negro, Beige",
     "talles": "2,3,4,5,6"
   },
   {
@@ -542,24 +532,23 @@
   {
     "id": 55,
     "categoria": "bebe",
-    "nombre": "Conjunto Wafle",
+    "nombre": "Conjunto Waffle",
     "precio": 24900,
     "imagen": "imagenes/Screenshot_20251202-113725_WhatsApp.jpg",
     "stock": "4",
-    "color": "Azul,Gris,Verde",
+    "color": "Azul, Gris, Verde",
     "talles": "2,3,6"
   },
   {
     "id": 56,
     "categoria": "bebe",
-    "nombre": "Pantalon Cargo",
+    "nombre": "Pantalón Cargo",
     "precio": 22600,
     "imagen": "imagenes/Screenshot_20250705-105300_Drive.jpg",
     "stock": "3",
-    "color": "Azul,Negro,Verde",
+    "color": "Azul, Negro, Verde",
     "talles": "2,3,5"
   },
-  null,
   {
     "id": 58,
     "categoria": "niño",
@@ -567,7 +556,7 @@
     "precio": 15600,
     "imagen": "imagenes/Screenshot_20251202-120411_WhatsApp.jpg",
     "stock": "3",
-    "color": "Roja,Azul claro,Azul Oscuro",
+    "color": "Roja, Azul claro, Azul oscuro",
     "talles": "6/7,8/9,14"
   }
 ]
