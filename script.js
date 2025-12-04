@@ -308,3 +308,23 @@ document.getElementById("btn-like").onclick = sumarLike;
 
 // Cargar likes al iniciar
 cargarLikes();
+
+
+/* === CONTADOR REAL DE VISITAS === */
+let visitas = localStorage.getItem("visitasPG") || 0;
+visitas++;
+localStorage.setItem("visitasPG", visitas);
+document.getElementById("visitas-texto").textContent = visitas;
+
+
+/* === LIKE BUTTON === */
+let likes = localStorage.getItem("likesPG") || 0;
+
+document.getElementById("likeBtn").addEventListener("click", () => {
+    likes++;
+    localStorage.setItem("likesPG", likes);
+
+    let btn = document.getElementById("likeBtn");
+    btn.style.transform = "scale(1.2)";
+    setTimeout(() => btn.style.transform = "scale(1)", 150);
+});
